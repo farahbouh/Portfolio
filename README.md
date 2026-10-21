@@ -155,6 +155,6 @@ Les contenus (textes, images, projets présentés) sont sous [CC BY-NC 4.0](http
 
 Réalisé par [Farah](https://github.com/farahbouh) 
 
-Contact : [LinkedIn](https://www.linkedin.com/in/farahbouh) · [Email](farah.bouhnaida@gmail.com)
+Contact : [LinkedIn](https://www.linkedin.com/in/farahbouh) · [Email](mailto:farah.bouhnaida@gmail.com)
 
 </div>
