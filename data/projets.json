@@ -10,7 +10,7 @@
   "collaboration": "en autonomie",
   "tags": ["Flask", "Python", "PostgreSQL", "API REST", "Docker", "CI/CD", "Git"],
   "lien_demo": "https://interactiv-media.netlify.app/",
-  "lien_video": "static/videos/interactiv-media.mp4",
+  "lien_video": "/static/videos/interactiv-media.mp4",
   "lien_code": "https://github.com/farahbouh/Interactiv-media"
 },
   {
@@ -66,7 +66,7 @@
   "collaboration": "en autonomie",
   "tags": ["Flask", "Python", "JavaScript", "HTML", "UX/UI", "Git"],
   "lien_demo": "https://farahbouh.netlify.app/",
-  "lien_video": "static/videos/portfolio.mp4",
+  "lien_video": "/static/videos/portfolio.mp4",
   "lien_code": "https://github.com/farahbouh/Portfolio"
 },
 {
