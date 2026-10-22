@@ -49,11 +49,11 @@
     "points": [
       "Plusieurs clients en parallèle (un thread par connexion), commandes SET / GET / DEL",
       "Stockage partagé protégé par mutex",
-     "Code séparé en modules distincts : réseau, protocole, analyseur, stockage)",
+      "Code séparé en modules distincts : réseau, protocole, analyseur, stockage",
       "3 suites de tests unitaires, build avec Makefile"
     ],
-    "description": "Réimplémentation d'un mini Redis : serveur clé-valeur TCP multithread en C++17. Écoute sur le port 8080, accepte plusieurs clients simultanément (un thread par connexion via std::thread), avec un stockage partagé protégé par std::mutex et un flag d'arrêt en std::atomic<bool>. Protocole texte SET / GET / DEL, réponses OK / valeur / ERREUR. Code séparé en trois couches (réseau, analyseur de protocole, stockage), build avec Makefile (cibles all, test, clean) et trois suites de tests unitaires (stockage, analyseur, serveur).",
-    "bloc_lettre": "Pour comprendre comment fonctionne un serveur TCP multi-clients en C++, j'ai réimplémenté un mini Redis : sockets POSIX (socket, bind, listen, accept, recv, send), un thread par client avec std::thread, stockage partagé protégé par std::mutex et flag d'arrêt en std::atomic<bool>. J'ai séparé le réseau, le protocole et les données en trois couches, et écrit trois suites de tests unitaires (stockage, analyseur, serveur). J'ai aussi dû ajouter un tampon pour gérer les messages coupés par TCP, un problème concret que je n'avais pas anticipé. Ce projet m'a appris la programmation réseau bas niveau, la concurrence, et l'organisation d'un projet C++ avec Makefile.",
+    "description": "Réimplémentation d'un mini Redis : serveur clé-valeur TCP multithread en C++17. Écoute sur le port 8080, accepte plusieurs clients simultanément (un thread par connexion via std::thread), avec un stockage partagé protégé par std::mutex et un flag d'arrêt en std::atomic<bool>. Protocole texte SET / GET / DEL, réponses OK / valeur / ERREUR. Code séparé en modules distincts (réseau, protocole, analyseur, stockage), build avec Makefile (cibles all, test, clean) et trois suites de tests unitaires (stockage, analyseur, serveur).",
+    "bloc_lettre": "Pour comprendre comment fonctionne un serveur TCP multi-clients en C++, j'ai réimplémenté un mini Redis : sockets POSIX (socket, bind, listen, accept, recv, send), un thread par client avec std::thread, stockage partagé protégé par std::mutex et flag d'arrêt en std::atomic<bool>. J'ai séparé le code en modules distincts (réseau, protocole, analyseur et stockage) et écrit trois suites de tests unitaires (stockage, analyseur, serveur). Ce projet m'a appris la programmation réseau bas niveau, la concurrence, et l'organisation d'un projet C++ avec Makefile.",
     "duree": "octobre 2026 (quelques semaines)",
     "statut": "terminé",
     "type": "personnel",
@@ -91,9 +91,9 @@
       "Architecture MVC avec patron Observateur, interface Swing",
       "Une machine = un thread (schéma maître / esclave)",
       "Création de plusieurs machines : rotater, découpeuse, mixer, painter, balancer",
-      "4 niveaux de difficulté, pipeline GitLab CI/CD"
+      "4 niveaux de difficulté, grille 16 × 16"
     ],
-    "description": "Clone en Java du jeu de logistique Shapez.io : placer des machines sur une grille 16 × 16 et les relier par des tapis roulants pour fabriquer les formes demandées par le Hub, avec 4 niveaux de difficulté croissante. Projet universitaire en binôme (UE LIFPOO, 2025-2026). Architecture Modèle / Vue-Contrôleur avec patron Observateur, chaque machine tournant dans son propre thread (schéma maître / esclave). Sprites, code de lancement et début du tapis roulant fournis par l’enseignant. 9 machines implémentées : Mine, Tapis roulant, Rotater, Découpeuse, Balancer, Mixer, Painter, Hub, Poubelle. Build avec IntelliJ IDEA et pipeline GitLab CI/CD.",
+    "description": "Clone en Java du jeu de logistique Shapez.io : placer des machines sur une grille 16 × 16 et les relier par des tapis roulants pour fabriquer les formes demandées par le Hub, avec 4 niveaux de difficulté croissante. Projet universitaire en binôme (UE LIFPOO, 2025-2026). Architecture Modèle / Vue-Contrôleur avec patron Observateur, chaque machine tournant dans son propre thread (schéma maître / esclave). Sprites, code de lancement et début du tapis roulant fournis par l'enseignant. 9 machines implémentées : Mine, Tapis roulant, Rotater, Découpeuse, Balancer, Mixer, Painter, Hub, Poubelle. Build avec IntelliJ IDEA.",
     "bloc_lettre": "Avec mon binôme, nous avons reproduit le jeu Shapez.io en Java/Swing en respectant une architecture Modèle / Vue-Contrôleur et le patron Observateur. J'ai implémenté plusieurs machines (rotater, découpeuse, mixer, painter, balancer…) sur un socle fourni par l'enseignant, avec une grille 16 × 16 et 4 niveaux de difficulté. Ce projet m'a appris à appliquer MVC et l'Observateur sur un vrai projet, à faire travailler plusieurs machines en parallèle avec des threads (schéma maître / esclave), à modéliser des objets métier en POO, et à travailler à deux sur un même code avec Git et GitLab.",
     "duree": "avril 2026 (1 mois)",
     "statut": "terminé",
