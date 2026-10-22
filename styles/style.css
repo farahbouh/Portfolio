@@ -1379,6 +1379,102 @@ nav a.active {
 }
 
 /* ============================================================
+   CARTES PROJETS : résumé, puces, "en savoir plus", projet phare
+   ============================================================ */
+.carte-projet .corps-projet {
+    flex-grow: 1;
+    margin-bottom: 16px;
+}
+
+.resume-projet {
+    font-size: 15.5px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--texte);
+    margin: 0 0 12px;
+}
+
+.points-projet {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 14px;
+    display: grid;
+    gap: 8px;
+}
+
+.points-projet li {
+    position: relative;
+    padding-left: 22px;
+    font-size: 14.5px;
+    line-height: 1.5;
+    color: var(--texte-secondaire);
+}
+
+.points-projet li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.45em;
+    width: 9px;
+    height: 9px;
+    background: var(--jaune);
+    border: var(--bordure-fine) solid var(--marine);
+    border-radius: 2px;
+}
+
+.details-projet {
+    margin: 0;
+}
+
+.details-projet summary {
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--rouge-fonce);
+}
+
+.details-projet summary:hover {
+    text-decoration: underline;
+}
+
+.details-projet summary:focus-visible {
+    outline: 3px solid var(--rouge);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+.details-projet .description {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 10px 0 0;
+}
+
+/* Projet phare : carte pleine largeur */
+.carte-projet.carte-projet-phare {
+    flex: 1 1 100%;
+}
+
+.badge-phare {
+    display: inline-block;
+    padding: 4px 13px;
+    border-radius: var(--rayon-sm);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    background: var(--surface-alt-2);
+    color: var(--marine);
+    border: var(--bordure-fine) solid var(--marine);
+}
+
+@media (min-width: 768px) {
+    .carte-projet-phare .points-projet {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 28px;
+    }
+}
+
+/* ============================================================
    FOOTER
    ============================================================ */
 footer {

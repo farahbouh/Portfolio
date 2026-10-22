@@ -5,12 +5,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (!marquee1 && !badgesCompetences) return;
 
-    fetch('/data/competences.json')
-        .then(response => {
+    function chargerJson(url) {
+        return fetch(url).then(response => {
             if (!response.ok) throw new Error('Erreur réseau');
             return response.json();
-        })
-        .then(competences => {
+        });
+    }
+
+    Promise.all([
+        chargerJson('/data/competences.json'),
+        // Si les projets ne se chargent pas, on affiche toutes les compétences plutôt que rien
+        chargerJson('/data/projets.json').catch(() => null)
+    ])
+        .then(([toutes, projets]) => {
+            // On ne garde que les compétences liées à au moins un projet,
+            // sinon le lien /projets?competence=... mène à une page vide
+            let competences = toutes;
+            if (Array.isArray(projets)) {
+                const utilisees = new Set(projets.flatMap(p => p.tags || []));
+                competences = toutes.filter(comp => utilisees.has(comp));
+            }
+
             // --- Marquee de la page d'accueil ---
             if (marquee1 && marquee2) {
                 [marquee1, marquee2].forEach((track, index) => {
