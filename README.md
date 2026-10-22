@@ -132,7 +132,7 @@ Ajoutez une entrée dans `data/projets.json` : la page Projets et le filtre par 
 
 ## Ce que ce projet m'a appris
 
-- Structurer une application Flask (routes, templates Jinja, gestion de la 404)
+- Structurer une application Flask (routes, gestion de la 404)
 - Utiliser un fichier JSON pour stocker les données
 - Charger et filtrer dynamiquement du contenu en JavaScript
 - Suivre les Conventional Commits tout au long du projet
