@@ -23,7 +23,11 @@
 
 ## Pourquoi ce projet ?
 
-Présenter, au-delà de mon CV, mes projets et mes compétences de façon plus ludique.
+Portfolio personnel développé en Flask pour présenter mes projets, mes compétences et mon parcours professionnel.
+
+Le site affiche les projets et les compétences à partir de fichiers JSON, avec un front dynamique en JavaScript.
+
+L’objectif était de proposer une vitrine simple, claire et facilement modifiable sans toucher au code métier.
 
 ---
 
@@ -38,10 +42,9 @@ Présenter, au-delà de mon CV, mes projets et mes compétences de façon plus l
 
 __*Pourquoi cette stack* ?__
 
-D'abord parce qu'elle s'appuie sur ce que je maîtrise déjà (HTML, CSS, Python).
-Le but était d'apprendre à utiliser Python dans une interface web et de découvrir plus en profondeur JavaScript et JSON.
+La stack a été choisie pour un site simple, lisible et facilement maintenable. Flask permet de servir le contenu de manière légère, tandis que JavaScript et JSON assurent une gestion dynamique des projets et des compétences sans complexifier l’architecture.
 
-__Côté technique__ : pas de framework front (le site reste simple), Flask (peu de routes), du JSON plutôt qu'une base de données pour garder le contrôle sur les données et Formspree pour éviter de gérer un backend d'email.
+Le site reste volontairement léger, avec peu de routes et une structure simple à comprendre, ce qui facilite sa maintenance et son évolution.
 
 ---
 
@@ -132,10 +135,10 @@ Ajoutez une entrée dans `data/projets.json` : la page Projets et le filtre par 
 
 ## Ce que ce projet m'a appris
 
-- Structurer une application Flask (routes, gestion de la 404)
-- Utiliser un fichier JSON pour stocker les données
-- Charger et filtrer dynamiquement du contenu en JavaScript
-- Suivre les Conventional Commits tout au long du projet
+- Structurer une application Flask avec des routes et une gestion simple de pages
+- Gérer des données dynamiques à partir de fichiers JSON
+- Charger et filtrer du contenu en JavaScript sans framework front
+- Concevoir une vitrine personnelle claire, modulable et facile à maintenir
 
 ---
 ## Contribuer
